@@ -1,7 +1,20 @@
 .ctn {
+  width: 100%;
   max-width: var(--w-container);
   padding: var(--space-m);
   margin: 0 auto;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+
+  &.s {
+    gap: var(--space-s);
+  }
+  &.m {
+    gap: var(--space-m);
+  }
 }
 
 .title {
