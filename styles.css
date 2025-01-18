@@ -178,7 +178,7 @@ table {
   src: url('../fonts/Roboto_Condensed-ExtraLight.ttf') format('truetype');
   font-weight: light;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 
 @font-face {
@@ -186,11 +186,11 @@ table {
   src: url('../fonts/Roboto_Condensed-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Helvetica, Arial, Sans-Serif;
 }
 
 a {
@@ -311,6 +311,7 @@ a {
   width: 100%;
   display: block;
   border-radius: var(--radius-md);
+  aspect-ratio: 1;
 }
 
 .socials-ctn {
