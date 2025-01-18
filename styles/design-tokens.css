@@ -3,8 +3,8 @@
   --clr-title: #181818;
   --clr-text: #36373d;
   --clr-link: #962c84;
-  --clr-bg-strong: #ccf5ac;
-  --clr-bg-light: #3d2b56;
+  --clr-bg-light: #ccf5ac;
+  --clr-bg-strong: #3d2b56;
 
   /* font size */
   --font-size-xs: 0.75rem;
@@ -34,4 +34,5 @@
 
   /* radius */
   --radius-md: 1rem;
+  --radius-full: 9999px;
 }
