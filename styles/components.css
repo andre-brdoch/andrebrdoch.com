@@ -18,7 +18,7 @@
 }
 
 .title {
-  font-size: clamp(var(--font-size-l), 3.5vw, var(--font-size-xl2));
+  font-size: clamp(var(--font-size-xl), 3.5vw, var(--font-size-xl2));
   font-weight: var(--font-weight-normal);
   letter-spacing: -0.05rem;
   line-height: 1.1;
@@ -30,4 +30,10 @@
   font-weight: var(--font-weight-thin);
   line-height: 1.4;
   color: var(--clr-text);
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: var(--font-size-l);
+  }
 }
