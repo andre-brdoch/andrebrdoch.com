@@ -1,0 +1,20 @@
+.ctn {
+  max-width: var(--w-container);
+  padding: var(--space-m);
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(var(--font-size-l), 3.5vw, var(--font-size-xl2));
+  font-weight: var(--font-weight-normal);
+  letter-spacing: -0.05rem;
+  line-height: 1.1;
+  color: var(--clr-title);
+}
+
+.text {
+  font-size: clamp(var(--font-size-m), 1.3vw, var(--font-size-l));
+  font-weight: var(--font-weight-thin);
+  line-height: 1.4;
+  color: var(--clr-text);
+}

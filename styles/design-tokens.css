@@ -1,0 +1,33 @@
+:root {
+  /* color */
+  --clr-title: #181818;
+  --clr-text: #36373d;
+
+  /* font size */
+  --font-size-xs: 0.75rem;
+  --font-size-s: 1rem;
+  --font-size-m: 1.25rem;
+  --font-size-l: 2rem;
+  --font-size-xl: 3.25rem;
+  --font-size-xl2: 5.25rem;
+
+  /* font weight */
+  --font-weight-thin: 200;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+
+  /* space */
+  --space-xs2: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1.25rem;
+  --space-l: 2rem;
+  --space-xl: 3.25rem;
+  --space-xl2: 5.25rem;
+
+  /* size */
+  --w-container: 90rem;
+
+  /* radius */
+  --radius-md: 1rem;
+}
