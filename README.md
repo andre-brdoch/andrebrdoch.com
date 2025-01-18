@@ -1,5 +1,7 @@
 # andrebrdoch.com
 
+https://andrebrdoch.com
+
 For now just plain vanilla code 🍦
 
 ## Development
