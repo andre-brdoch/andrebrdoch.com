@@ -4,7 +4,6 @@
   "htmlWhitespaceSensitivity": "ignore",
   "printWidth": 100,
   "proseWrap": "never",
-  "singleAttributePerLine": true,
   "singleQuote": true,
   "tabWidth": 2,
   "useTabs": false
