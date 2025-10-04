@@ -168,9 +168,11 @@ table {
 
   /* animation */
   --anim-duration-bounce: 0.7s;
-  --anim-delay-between-bounce-and-slide: 0.3s;
+  --anim-duration-brackets: 0.6s;
   --anim-duration-slide: 0.6s;
+  --anim-delay-between-bounce-and-slide: 0.3s;
   --anim-delay-between-slide: 0.175s;
+  --anim-curve-bouncy-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* === Global === */
@@ -255,7 +257,7 @@ a {
     transform: translateX(calc(var(--space-m) * -1));
   }
   100% {
-    opacity: 100;
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -274,10 +276,30 @@ a {
   }
 }
 
+@keyframes bracket-intro-1 {
+  0% {
+    opacity: 0;
+    transform: skew(40deg, 20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: skew(0deg, 0deg);
+  }
+}
+@keyframes bracket-intro-2 {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) skew(30deg, 60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(180deg) skew(0deg, 0deg);
+  }
+}
+
 .fade-in {
   opacity: 0;
-  animation: bounce-in var(--anim-duration-bounce) cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s 1
-    forwards;
+  animation: bounce-in var(--anim-duration-bounce) var(--anim-curve-bouncy-bounce) 0.2s 1 forwards;
 }
 
 .slide-in-children > * {
@@ -353,6 +375,7 @@ a {
     border-right-color: var(--_clr-bg);
     border-top-left-radius: 0;
     border-top-color: var(--_clr-bg);
+    opacity: 0;
   }
   &::before {
     --_size: 20%;
@@ -361,6 +384,8 @@ a {
     --_clr-bg: var(--clr-bg-light);
     bottom: var(--_offset);
     left: var(--_offset);
+    animation: bracket-intro-1 var(--anim-duration-brackets) var(--anim-curve-bouncy-bounce)
+      calc(var(--anim-duration-bounce) * 1.2) 1 forwards;
   }
   &::after {
     --_size: 13%;
@@ -369,7 +394,8 @@ a {
     --_clr-bg: var(--clr-bg-strong);
     top: var(--_offset);
     right: var(--_offset);
-    transform: rotate(180deg);
+    animation: bracket-intro-2 var(--anim-duration-brackets) var(--anim-curve-bouncy-bounce)
+      calc(var(--anim-duration-bounce) * 0.9) 1 forwards;
   }
 }
 
@@ -381,6 +407,8 @@ a {
   border-radius: var(--radius-md);
   aspect-ratio: 1;
   background: var(--clr-bg-light);
+
+  opacity: 0;
 }
 
 .socials-ctn {
