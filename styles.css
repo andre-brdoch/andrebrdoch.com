@@ -129,12 +129,13 @@ table {
 
 :root {
   /* color */
-  --clr-title: #181818;
-  --clr-text: #36373d;
-  --clr-text-light: #fff;
-  --clr-link: #962c84;
-  --clr-bg-light: #ccf5ac;
-  --clr-bg-strong: #3d2b56;
+  --clr-accent-1: #76e940;
+  --clr-accent-2: #c96db9;
+  --clr-title: var(--clr-accent-1);
+  --clr-text: #e4e6f0;
+  --clr-link: var(--clr-accent-2);
+  --clr-bg-light: #1e293b;
+  --clr-bg-strong: #121a2d;
 
   /* font size */
   --font-size-xs: 0.75rem;
@@ -356,7 +357,7 @@ a {
   &::before {
     --_size: 20%;
     --_width: 4px;
-    --_clr: var(--clr-bg-strong);
+    --_clr: var(--clr-accent-2);
     --_clr-bg: var(--clr-bg-light);
     bottom: var(--_offset);
     left: var(--_offset);
@@ -364,7 +365,7 @@ a {
   &::after {
     --_size: 13%;
     --_width: 3px;
-    --_clr: var(--clr-bg-light);
+    --_clr: var(--clr-accent-1);
     --_clr-bg: var(--clr-bg-strong);
     top: var(--_offset);
     right: var(--_offset);
@@ -391,7 +392,7 @@ a {
   grid-area: footer;
   padding: var(--space-xs);
   background: var(--clr-bg-strong);
-  color: var(--clr-text-light);
+  color: var(--clr-text);
   font-size: var(--font-size-xs);
 }
 
