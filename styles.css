@@ -128,14 +128,25 @@ table {
 /* === Design tokens === */
 
 :root {
-  /* color */
-  --clr-accent-1: #76e940;
-  --clr-accent-2: #c96db9;
-  --clr-title: var(--clr-accent-1);
-  --clr-text: #e4e6f0;
-  --clr-link: var(--clr-accent-2);
-  --clr-bg-light: #1e293b;
-  --clr-bg-strong: #121a2d;
+  /* color palette */
+  --clrp-ghost-white: #e4e6f0;
+  --clrp-lavender: #cacee2;
+  --clrp-french-rose: #fa4c8c;
+  --clrp-princeton-orange: #ff931f;
+  --clrp-prussian-blue: #1e293b;
+  --clrp-oxford-blue: #121a2d;
+
+  /* semantic colors */
+  --clr-accent-1: var(--clrp-princeton-orange);
+  --clr-accent-2: var(--clrp-french-rose);
+  --clr-title: var(--clrp-princeton-orange);
+  --clr-text: var(--clrp-ghost-white);
+  --clr-label: var(--clrp-lavender);
+  --clr-button-bg: var(--clrp-princeton-orange);
+  --clr-button-text: var(--clrp-oxford-blue);
+  --clr-link: var(--clrp-french-rose);
+  --clr-bg-light: var(--clrp-prussian-blue);
+  --clr-bg-strong: var(--clrp-oxford-blue);
 
   /* font size */
   --font-size-xs: 0.75rem;
