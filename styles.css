@@ -555,6 +555,11 @@ a {
   gap: var(--space-s);
 }
 
+.page-form {
+  animation: bounce-in calc(var(--anim-duration-bounce) * 1.5) var(--anim-curve-bouncy-bounce) 2.2s
+    1 forwards;
+}
+
 .footer {
   grid-area: footer;
   padding: var(--space-xs);
