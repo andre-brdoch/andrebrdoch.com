@@ -24,6 +24,32 @@
                   <a href="https://github.com/andre-brdoch" target="_blank">Github</a>
                 </li>
               </ul>
+
+              <form name="contact" class="form" netlify onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                  <div class="form-item">
+                    <label class="label" for="name">Name</label>
+                    <input class="input" id="name" type="text" name="name" placeholder="John Doe" />
+                  </div>
+                  <div class="form-item">
+                    <label class="label" for="email">Email</label>
+                    <input
+                      class="input"
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="john@doe.com"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-item">
+                    <label class="label" for="message">Message</label>
+                    <textarea class="textarea" name="message" id="message" rows="4"></textarea>
+                  </div>
+                </div>
+                <button class="button" type="submit">Send</button>
+              </form>
             </div>
 
             <div class="header-img-ctn">
@@ -46,5 +72,26 @@
         </ul>
       </footer>
     </main>
+
+    <script>
+      async function handleSubmit(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+        const body = new URLSearchParams(formData).toString();
+
+        try {
+          await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body,
+          });
+          alert('Thank you for your submission');
+        } catch (error) {
+          alert(error);
+        }
+      }
+    </script>
   </body>
 </html>
