@@ -14,7 +14,7 @@
         <div class="ctn">
           <div class="header-grid">
             <div class="header-text-content stack s slide-in-children">
-              <h1 class="title">André Brdoch</h1>
+              <h1 class="title l">André Brdoch</h1>
               <p class="text">Crafting clean and efficient websites for the modern web.</p>
               <ul class="socials-ctn">
                 <li class="text">
@@ -59,6 +59,13 @@
                   </div>
                 </div>
                 <button class="button" type="submit">Send</button>
+
+                <div id="form-confirmation" class="form-confirmation hidden">
+                  <div class="stack s">
+                    <h2 class="title s">Thank you for your submission!</h2>
+                    <p class="text">I will contact you shortly.</p>
+                  </div>
+                </div>
               </form>
             </div>
 
@@ -97,7 +104,9 @@
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body,
           });
-          alert('Thank you for your submission');
+
+          const confirmation = document.getElementById('form-confirmation');
+          confirmation.classList.remove('hidden');
         } catch (error) {
           alert(error);
         }
