@@ -331,6 +331,16 @@ a {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs2);
+
+  &.hidden {
+    opacity: 0;
+    color: transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -9999px;
+    right: -9999px;
+  }
 }
 
 @media (max-width: 767px) {

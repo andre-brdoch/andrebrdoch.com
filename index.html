@@ -25,11 +25,21 @@
                 </li>
               </ul>
 
-              <form name="contact" class="form" netlify onsubmit="handleSubmit(event)">
+              <form
+                name="contact"
+                class="form"
+                netlify
+                netlify-honeypot="age"
+                onsubmit="handleSubmit(event)"
+              >
                 <div class="form-row">
                   <div class="form-item">
                     <label class="label" for="name">Name</label>
                     <input class="input" id="name" type="text" name="name" placeholder="John Doe" />
+                  </div>
+                  <div class="form-item hidden">
+                    <label class="label" for="age">Age</label>
+                    <input class="input" id="age" type="number" name="age" />
                   </div>
                   <div class="form-item">
                     <label class="label" for="email">Email</label>
