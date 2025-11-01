@@ -226,6 +226,7 @@ table {
 
 body {
   font-family: 'Roboto', Helvetica, Arial, Sans-Serif;
+  background-color: var(--clr-bg-strong);
 }
 
 a {
@@ -572,6 +573,11 @@ a {
 }
 
 @media (max-width: 767px) {
+  .page-grid {
+    height: auto;
+    min-height: 100vh;
+  }
+
   .header {
     --_size: var(--space-m);
     background: linear-gradient(
@@ -588,6 +594,7 @@ a {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+    padding-top: var(--space-m);
   }
 
   .header-text-content {
@@ -596,7 +603,7 @@ a {
 
   .header-img-ctn {
     position: static;
-    max-width: 10rem;
+    max-width: 6rem;
     transform: none;
 
     &::before,
