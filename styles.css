@@ -335,6 +335,8 @@ a {
   flex-direction: column;
   gap: var(--space-s);
   position: relative;
+  /* prevent overflow due to honeypot */
+  overflow: hidden;
 }
 
 .form-row {
@@ -385,6 +387,26 @@ a {
     opacity: 0;
     transform: scale(0.8);
     pointer-events: none;
+  }
+}
+
+.bg-overlay {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--clr-bg-strong);
+  }
+
+  @media (max-width: 767px) {
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -459,35 +481,34 @@ a {
 
 /* === Page === */
 
-.page-grid {
+.page {
   display: grid;
   grid-template-areas:
-    'header'
+    'content'
     'footer';
   grid-template-rows: 1fr auto;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+}
+
+.content {
+  grid-area: content;
 }
 
 .header {
-  grid-area: header;
   background: var(--clr-bg-light);
-  background: linear-gradient(
-    90deg,
-    var(--clr-bg-light) 0%,
-    var(--clr-bg-light) 67%,
-    var(--clr-bg-strong) 67%,
-    var(--clr-bg-strong) 100%
-  );
-  position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
+
+  &::before {
+    clip-path: polygon(67% 0%, 100% 0%, 100% 100%, 67% 100%);
+  }
 }
 
 .header-grid {
   display: grid;
   gap: var(--space-m);
-  grid-template-columns: clamp(17rem, 33%, 27rem) 1fr;
+  grid-template-columns: clamp(17rem, 33%, 37rem) 1fr;
   align-items: center;
   height: 100%;
 }
@@ -558,6 +579,22 @@ a {
 .page-form {
   animation: bounce-in calc(var(--anim-duration-bounce) * 1.5) var(--anim-curve-bouncy-bounce) 2.2s
     1 forwards;
+}
+
+.details {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--clr-bg-light);
+
+  &::before {
+    clip-path: polygon(0% 0%, 67% 0%, 67% 100%, 0% 100%);
+  }
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 30rem;
 }
 
 .footer {
