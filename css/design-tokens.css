@@ -1,0 +1,75 @@
+:root {
+  /* color palette */
+  --clrp-ghost-white: #e4e6f0;
+  --clrp-powder-blue: #bbc9dd;
+  --clrp-taupe-gray: #898c94;
+  --clrp-french-rose: #d8618d;
+  --clrp-princeton-orange: #ff931f;
+  --clrp-sandy-brown: #ffa647;
+  --clrp-orange: #f57e00;
+  --clrp-prussian-blue: #1e293b;
+  --clrp-oxford-blue: #121a2d;
+
+  /* semantic colors */
+  --clr-accent-1: var(--clrp-princeton-orange);
+  --clr-accent-2: var(--clrp-french-rose);
+  --clr-title: var(--clrp-princeton-orange);
+  --clr-text: var(--clrp-ghost-white);
+  --clr-label: var(--clrp-ghost-white);
+  --clr-input-text: var(--clrp-ghost-white);
+  --clr-input-text-placeholder: var(--clrp-taupe-gray);
+  --clr-input-bg: var(--clrp-oxford-blue);
+  --clr-input-border: var(--clrp-taupe-gray);
+  --clr-input-outline: var(--clrp-french-rose);
+  --clr-button-bg: var(--clrp-princeton-orange);
+  --clr-button-bg-hover: var(--clrp-sandy-brown);
+  --clr-button-bg-active: var(--clrp-orange);
+  --clr-button-text: var(--clrp-prussian-blue);
+  --clr-link: var(--clrp-french-rose);
+  --clr-bg-light: var(--clrp-prussian-blue);
+  --clr-bg-strong: var(--clrp-oxford-blue);
+
+  /* font size */
+  --font-size-xs: 0.75rem;
+  --font-size-s: 1rem;
+  --font-size-m: 1.25rem;
+  --font-size-l: 2rem;
+  --font-size-xl: 3.25rem;
+  --font-size-xl2: 5.25rem;
+
+  /* font weight */
+  --font-weight-thin: 200;
+  --font-weight-normal: 400;
+
+  /* space */
+  --space-xs2: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1.25rem;
+  --space-l: 2rem;
+  --space-xl: 3.25rem;
+  --space-xl2: 5.25rem;
+
+  /* size */
+  --w-container: 90rem;
+  --w-header-img: 30rem;
+
+  /* radius */
+  --radius-xs2: 0.125rem;
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-full: 9999px;
+
+  /* animation */
+  --anim-duration-bounce: 0.7s;
+  --anim-duration-brackets: 0.6s;
+  --anim-duration-slide: 0.6s;
+  --anim-duration-confirmation: 0.2s;
+  --anim-delay-between-bounce-and-slide: 0.3s;
+  --anim-delay-between-slide: 0.175s;
+  --anim-curve-bouncy-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* z-index */
+  --z-foreground: 1;
+}
