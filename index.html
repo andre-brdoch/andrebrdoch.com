@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>André Brdoch - Web Development Consultant</title>
     <meta name="description" content="Homepage of André Brdoch" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/design-tokens.css" />
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/page.css" />
   </head>
 
   <body>
     <div class="page">
-      <main class="content">
+      <main class="page-content">
         <header class="header bg-overlay dark">
           <div class="ctn">
             <div class="header-grid foreground">
@@ -90,7 +97,7 @@
 
               <form
                 name="contact"
-                class="form page-form"
+                class="form contact-form"
                 netlify
                 netlify-honeypot="age"
                 onsubmit="handleSubmit(event)"
